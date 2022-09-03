@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:     
+    build:
+        context: .
+        dockerfile: ./docker/web/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      TZ: Europe/Warsaw
+    volumes:
+      - /srv/${PROJECT_NAME}/configs/serverconfig.json:/app/appsettings.Production.json

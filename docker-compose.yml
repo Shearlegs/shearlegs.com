@@ -1,6 +1,7 @@
 version: '3'
 services:
-  web:     
+  web:
+    restart: always  
     build:
         context: .
         dockerfile: ./docker/web/Dockerfile
